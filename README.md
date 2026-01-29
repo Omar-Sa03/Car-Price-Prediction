@@ -158,40 +158,5 @@ set CAR_PRICE_API_URL=http://localhost:8000
 - `RandomForestRegressor` gives a strong baseline and is **robust** with
   limited feature engineering, which is ideal for a portfolio project.
 
-### 8. Ideas for further improvements
 
-**Modeling**
-- Try gradient boosting models (e.g. `HistGradientBoostingRegressor`, XGBoost, LightGBM).
-- Perform more systematic hyperparameter optimization (Optuna, Bayesian optimization).
-- Add cross-validation and learning curves to better diagnose over/underfitting.
-- Log experiments with a tool like MLflow or Weights & Biases.
-
-**Data & features**
-- Enrich the dataset (e.g. scrape more sources, add region, color, options).
-- Engineer domain-specific features (age of vehicle, log-km, interaction terms).
-- Detect and handle remaining outliers with robust methods.
-
-**Deployment**
-- Package the app with **Docker**:
-  - one container for FastAPI
-  - one for Streamlit
-  - or a single container running both.
-- Deploy to cloud platforms (Render, Railway, Azure App Service, etc.).
-- Add CI (GitHub Actions) to:
-  - run tests
-  - check formatting/linting
-  - maybe trigger retraining on data changes.
-
-**UI/UX**
-- Make the Streamlit app bilingual (FR/EN).
-- Add charts comparing the predicted price to:
-  - distribution of prices for similar cars
-  - minimum / maximum prices in the dataset.
-- Display model confidence intervals or at least sensitivity to year / kilometrage.
-
----
-
-This setup is designed to be **easy to run locally**, but it also follows
-patterns that are common in production ML projects, making it well-suited
-for inclusion in a professional portfolio or résumé.
 
